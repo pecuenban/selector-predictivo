@@ -6,7 +6,6 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./select-predictivo.component.css"]
 })
 export class SelectPredictivoComponent implements OnInit {
-  seleccionados: string[];
   opciones: any[];
   mostrar = false;
   constructor() {}

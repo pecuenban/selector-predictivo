@@ -1,0 +1,13 @@
+<div class="contenedor">
+<input id="input" (keydown)="cambio($event)"><span [className]="mostrar ? 'flecha active' : 'flecha inactive'"  (click)="Mostrar()"></span>
+</div>
+<ul>
+  <ng-container *ngFor="let opcion of opciones">
+<li *ngIf="opcion.activo && mostrar" (click)="seleccionar(opcion)">{{opcion.nombre}}</li>
+  </ng-container>
+</ul>
+<div class="seleccionados">
+  <ng-container *ngFor="let opcion of opciones">
+<span *ngIf="opcion.seleccionado" (click)="eliminar(opcion)">{{opcion.nombre}}</span>
+  </ng-container>
+</div>

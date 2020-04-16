@@ -1,0 +1,97 @@
+ul li{
+    list-style: none;
+    line-height: 18pt;
+    font-size: 13pt;
+    padding: 5px 4px;
+    cursor: pointer;
+}
+ul li:hover {
+    background: #bababa;
+}
+ul  {
+    padding: 0px 15px;
+    width: calc(450px - 30px);
+    display: inline-block;
+    min-width: calc( 215px - 30px);
+    background: white;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    max-height: 250px;
+    overflow: auto;
+}
+.contenedor {
+    position: relative;
+    min-width: 215px;
+    width: 450px;
+}
+input {
+    display: block;
+    min-width: calc( 100% - 20px)!important;
+    border: none;
+    font-size: 12pt;
+    line-height: 17pt;
+    outline: none;
+    padding: 10px;
+}
+.seleccionados span:after, .seleccionados span:before {
+    content: '';
+    position: absolute;
+    right: 9px;
+    height: 2px;
+    width: 13px;
+    background: black;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    margin: auto;
+    transform: rotate(45deg);
+}
+.seleccionados span:before {
+    transform: rotate(-45deg);
+}
+.seleccionados span {
+    background: white;
+    padding: 5px 25px 5px 15px;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+}
+.seleccionados {
+    margin-top: 15px;
+}
+.seleccionados span {
+    display: inline-block;
+    margin-right: 7px;
+}
+span.flecha {
+    width: 40px;
+    background: red;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+span.flecha.active:after {
+    transform: rotateX(0deg) rotate(-45deg);
+}
+span.flecha.inactive:after {
+    transform: rotateX(180deg) rotate(-45deg);
+}
+span.flecha:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-top: solid 2px;
+    border-right: solid 2px;
+    transform: rotateX(180deg) rotate(-45deg);
+    transform-origin: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all 0.5s;
+}

@@ -3,7 +3,7 @@
 </div>
 <ul>
   <ng-container *ngFor="let opcion of opciones">
-<li *ngIf="opcion.activo && mostrar" (click)="seleccionar(opcion)">{{opcion.nombre}}</li>
+<li *ngIf="opcion.activo && mostrar && !opcion.seleccionado" (click)="seleccionar(opcion)">{{opcion.nombre}}</li>
   </ng-container>
 </ul>
 <div class="seleccionados">
